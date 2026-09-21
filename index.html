@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Júnior Portfólio</title>
+    <meta name="description" content="Portfólio de José Júnior, estudante de Análise e Desenvolvimento de Sistemas. Conheça meus projetos, tecnologias e experiências.">
+    <meta name="keywords" content="dev, programador, portfolio, projetos">
+    <meta name="author" content="José Júnior">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="icon" href="images/i.png">
+    <style type="text/tailwindcss">
+        .button {
+            @apply w-[100%] h-[30px] sm:w-[100px] sm:h-[30px] bg-sky-500 hover:bg-sky-400 text-[10px] sm:text-[12px] rounded-lg font-bold cursor-pointer;
+        }
+        .readme-txt {
+            @apply text-xs md:text-[17px] text-justify md:text-justify text-gray-100 font-bold pt-5;
+        }
+        .gt-link {
+            @apply text-[10px] md:text-[15px] text-gray-100 hover:text-gray-300 font-bold;
+        }
+    </style>
+</head>
+<body class="grid-rows-3 bg-[rgb(4_20_27)]">
+    <header class="grid grid-cols-1 justify-items-center sm:justify-items-start [grid-template-areas:'img'_'txt1'_'txt2'_'txt3'_'txt4'_'nav'] sm:justify-center sm:grid-cols-[auto_450px] sm:[grid-template-areas:'img_txt1'_'img_txt2'_'img_txt3'_'img_txt4'_'img_nav'] ">
+        <span class="font-[Archivo_Black] text-[7px] sm:text-[13px] text-gray-100 text-center sm:text-left font-bold [grid-area:txt1] mt-3 sm:mt-10"><span class="text-sky-300">//</span> portfólio josé júnior</span>
+        <p class="font-[Archivo_Black] text-[25px] sm:text-[30px] lg:text-[50px] text-center sm:text-left text-gray-100 [grid-area:txt2]">Olá, eu sou</p>
+        <p class="font-[Archivo_Black] text-[25px] text-sky-300 sm:text-[30px] lg:text-[50px] text-center sm:text-left [grid-area:txt3] mt-[-10px] md:mt-[-10px]">José Júnior.</p>
+        <img src="images/image.jpg" alt="Foto José Júnior" class="[grid-area:img] w-24 h-24 sm:w-40 sm:h-40 lg:w-65 lg:h-65 border-sky-500 sm:mr-7 border-5 rounded-full mt-5 sm:mt-10">
+        <p class="text-[10px] lg:text-[15px] text-center sm:text-left text-gray-100 font-bold [grid-area:txt4] pr-5 pl-5 sm:pr-0 sm:pl-0 sm:pb-5">
+            Sou Estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de Pernambuco (IFPE) - Campus Palmares.
+        </p>
+        <nav class="[grid-area:nav] w-[100%]">
+            <ul class="flex flex-col sm:flex-row justify-start p-5 sm:p-0">
+                <li class="sm:pr-2 pb-2 sm:pb-0">
+                    <button class="button" onclick="showReadme()">Sobre Mim</button>
+                </li>
+                <li class="sm:pr-2 pb-2 sm:pb-0">
+                    <button class="button" onclick="showProjects()">Projetos</button>
+                </li>
+                <li class="sm:pr-2 pb-2 sm:pb-0">
+                    <button class="button" onclick="showTechs()">Tecnologias</button>
+                </li>
+                <li>
+                    <button class="button" onclick="showContact()">Contato</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="flex flex-col sm:mt-10 pr-5 pl-5">
+        <section id="readme" class="w-full max-w-200 mx-auto p-4 md:p-7 mt-2 mb-5 bg-[rgb(6_29_39)] rounded-lg">
+            <h2 class="font-[Archivo_Black] text-[10px] md:text-[15px] text-left text-gray-100 font-bold uppercase border-b-[4px] border-b-sky-500 pb-3"><span class="text-sky-300">//</span> Sobre Mim</h2>
+            <p class="readme-txt">Atualmente, estou construindo minha base em desenvolvimento de software e colocando meus conhecimentos em prática por meio de projetos próprios e atividades acadêmicas.</p>
+            <p class="readme-txt">
+                Tenho explorado diferentes áreas, como <span class="text-sky-300">Desenvolvimento Web, Programação Orientada a Objetos, Estruturas de Dados, Banco de Dados, Git, Inteligência Artificial e Machine Learning.</span>
+            </p>
+            <p class="readme-txt">
+                Mais do que apenas fazer um código funcionar, busco entender o raciocínio por trás de cada solução e encontrar formas mais claras e eficientes de resolver problemas.    
+                Tenho como um dos principais objetivos desenvolver minha lógica de programação, aprendendo a analisar problemas, identificar diferentes possibilidades de solução e transformá-las em algoritmos.         
+            </p>
+            <p class="readme-txt">
+                Além dos estudos, venho desenvolvendo projetos para experimentar novas tecnologias, colocar conceitos em prática e acompanhar minha evolução como desenvolvedor. Meu objetivo é continuar aprendendo, 
+                construir projetos cada vez mais completos e ampliar minha visão sobre o Desenvolvimento de Sistemas.            
+            </p>
+        </section>
+        <section id="projects" class="hidden w-full max-w-200 mx-auto p-4 md:p-7 mt-2 mb-5 bg-[rgb(6_29_39)] rounded-lg grid grid-cols-1 sm:grid-cols-2 [grid-template-areas:'h2'_'card1'_'card2'_'card3'_'card4'_'card5'_'card6'_'card7'_'card8'] sm:[grid-template-areas:'h2_h2'_'card1_card2'_'card3_card4'_'card5_card6'_'card7_card8'] gap-5">
+                <h2 class="font-[Archivo_Black] text-[10px] md:text-[15px] text-left text-gray-100 font-bold uppercase [grid-area:h2] border-b-[4px] border-b-sky-500 pb-3"><span class="text-sky-300">//</span> Meus Projetos</h2>
+                <div class="[grid-area:card1] bg-[rgb(9_44_59)] rounded-lg p-5">
+                <h3 class="text-[17px] sm:text-[20px] text-gray-100 font-bold">Calculadora</h3>
+                <p class="text-[10px] sm:text-[15px] font-bold text-gray-100 mt-1 mb-3">Calculadora web com operações matemáticas básicas e interface interativa.</p>
+                <img class="w-[100px] mb-3" src="https://skillicons.dev/icons?i=html,css,js&theme=light" alt="Tecnologias">
+                <div class="flex justify-between pt-2">
+                    <a href="#" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto</a>
+                    <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/calculadora-simples" target="_blank" title="GitHub" class="gt-link">GitHub</a>
+                </div>
+            </div>
+            <div class="[grid-area:card2] bg-[rgb(9_44_59)] rounded-lg p-5">
+                <h3 class="text-[17px] sm:text-[20px] text-gray-100 font-bold">Gerador de Senhas</h3>
+                <p class="text-[10px] sm:text-[15px] font-bold text-gray-100 mt-1 mb-3">Gere senhas aleatórias e seguras de forma rápida e personalizada.</p>
+                <img class="w-[100px] mb-3" src="https://skillicons.dev/icons?i=html,css,js&theme=light" alt="Tecnologias">
+                <div class="flex justify-between pt-2">
+                    <a href="#" title="Ver Projeto" target="_blank" class="gt-link">Ver Projeto</a>
+                    <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/gerador-de-senhas" target="_blank" title="GitHub" class="gt-link">GitHub</a>
+                </div>
+            </div>
+            <div class="[grid-area:card3] bg-[rgb(9_44_59)] rounded-lg p-5">
+                <h3 class="text-[17px] sm:text-[20px] text-gray-100 font-bold">Calculadora de IMC</h3>
+                <p class="text-[10px] sm:text-[15px] font-bold text-gray-100 mt-1 mb-3">Calcule o Índice de Massa Corporal a partir de peso e altura.</p>
+                <img class="w-[100px] mb-3" src="https://skillicons.dev/icons?i=html,css,js&theme=light" alt="Tecnologias">
+                <div class="flex justify-between pt-2">
+                    <a href="#" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto</a>
+                    <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/calculadora-imc" target="_blank" title="GitHub" class="gt-link">GitHub</a>
+                </div>
+            </div>
+            <div class="[grid-area:card4] bg-[rgb(9_44_59)] rounded-lg p-5">
+                <h3 class="text-[17px] sm:text-[20px] text-gray-100 font-bold">Python para Iniciantes</h3>
+                <p class="text-[10px] sm:text-[15px] font-bold text-gray-100 mt-1 mb-3">Algoritmos para praticar lógica de programação com Python.</p>
+                <img class="w-[33px] mb-3" src="https://skillicons.dev/icons?i=python&theme=dark" alt="Tecnologias">
+                <div class="flex justify-between pt-2">
+                    <a href="#" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto</a>
+                    <a href="https://github.com/josejrti/PythonParaIniciantes" target="_blank" title="GitHub" class="gt-link">GitHub</a>
+                </div>
+            </div>
+            <div class="[grid-area:card5] bg-[rgb(9_44_59)] rounded-lg p-5">
+                <h3 class="text-[17px] sm:text-[20px] text-gray-100 font-bold">Data e Hora</h3>
+                <p class="text-[10px] sm:text-[15px] font-bold text-gray-100 mt-1 mb-3">Exibe a data e hora em tempo real.</p>
+                <img class="w-[100px] mb-3" src="https://skillicons.dev/icons?i=html,css,js&theme=light" alt="Tecnologias">
+                <div class="flex justify-between pt-2">
+                    <a href="#" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto</a>
+                    <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/data-e-hora" target="_blank" title="GitHub" class="gt-link">GitHub</a>
+                </div>
+            </div>
+            <div class="[grid-area:card6] bg-[rgb(9_44_59)] rounded-lg p-5">
+                <h3 class="text-[17px] sm:text-[20px] text-gray-100 font-bold">Galeria de Imagens</h3>
+                <p class="text-[10px] sm:text-[15px] font-bold text-gray-100 mt-1 mb-3">Projeto de Galeria de imagens Web.</p>
+                <img class="w-[133px] mb-3" src="https://skillicons.dev/icons?i=html,css,js,tailwind&theme=dark" alt="Tecnologias">
+                <div class="flex justify-between pt-2">
+                    <a href="#" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto</a>
+                    <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/galeria-de-imagens" target="_blank" title="GitHub" class="gt-link">GitHub</a>
+                </div>
+            </div>
+            <div class="[grid-area:card7] bg-[rgb(9_44_59)] mb-1 rounded-lg p-5">
+                <h3 class="text-[17px] sm:text-[20px] text-gray-100 font-bold">Uso Seguro da Internet</h3>
+                <p class="text-[10px] sm:text-[15px] font-bold text-gray-100 mt-1 mb-3">Projeto de Website para curso de Segurança da Informação.</p>
+                <img class="w-[100px] mb-3" src="https://skillicons.dev/icons?i=html,css,js&theme=light" alt="Tecnologias">
+                <div class="flex justify-between pt-2">
+                    <a href="#" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto</a>
+                    <a href="https://github.com/josejrti/UsoSeguroDaInternet" target="_blank" title="GitHub" class="gt-link">GitHub</a>
+                </div>
+            </div>
+            <div class="[grid-area:card8] bg-[rgb(9_44_59)] mb-1 rounded-lg p-5">
+                <h3 class="text-[17px] sm:text-[20px] text-gray-100 font-bold">Meu Portfólio</h3>
+                <p class="text-[10px] sm:text-[15px] font-bold text-gray-100 mt-1 mb-3">Portfólio pessoal para apresentar meus projetos, estudos e tecnologias.</p>
+                <img class="w-[133px] mb-3" src="https://skillicons.dev/icons?i=html,css,js,tailwindcss&theme=dark" alt="Tecnologias">
+                <div class="flex justify-between pt-2">
+                    <a href="#" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto</a>
+                    <a href="https://github.com/josejrti/josejrti.github.io" target="_blank" title="GitHub" class="gt-link">GitHub</a>
+                </div>
+            </div>
+        </section>
+        <section id="techs" class="hidden w-full max-w-200 mx-auto p-4 md:p-7 mt-2 mb-5 bg-[rgb(6_29_39)] rounded-lg flex-col">
+            <h2 class="font-[Archivo_Black] text-[10px] md:text-[15px] text-left text-gray-100 font-bold uppercase border-b-[4px] border-b-sky-500 pb-3"><span class="text-sky-300">//</span> Tecnologias</h2>
+            <p class="text-gray-100 text-[13px] sm:text-[15px] font-bold mb-5 mt-5 text-center">Linguagens & Frameworks</p> 
+            <div class="flex flex-wrap gap-6 bg-[rgb(7_36_48)] justify-center rounded-lg">
+                <div class="flex items-center gap-2">
+                    <i class="devicon-python-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">Python</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-java-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">Java</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-javascript-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">JavaScript</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-html5-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">HTML5</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-css3-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">CSS3</span>
+                </div>
+                    <div class="flex items-center gap-2">
+                    <i class="devicon-tailwindcss-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">TailWind</span>
+                </div>
+            </div>
+            <p class="text-gray-100 text-[13px] sm:text-[15px] font-bold mb-5 mt-5 text-center">Editores & IDEs</p> 
+            <div class="flex flex-wrap gap-6 bg-[rgb(7_36_48)] justify-center rounded-lg">
+                <div class="flex items-center gap-2">
+                    <i class="devicon-vscode-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">VsCode</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-eclipse-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">Eclipse</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-intellij-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">Intellij</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-pycharm-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">PyCharm</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-vim-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">Vim</span>
+                </div>
+                    <div class="flex items-center gap-2">
+                    <i class="devicon-neovim-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">NeoVim</span>
+                </div>
+            </div>
+            <p class="text-gray-100 text-[13px] sm:text-[15px] font-bold mb-5 mt-5 text-center">Ferramentas & Sistemas</p> 
+            <div class="flex flex-wrap gap-6 bg-[rgb(7_36_48)] justify-center rounded-lg mb-1">
+                <div class="flex items-center gap-2">
+                    <i class="devicon-git-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">Git</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-github-plain text-gray-300 text-3xl"></i>
+                    <span class="text-gray-100 font-bold">GitHub</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-vercel-plain text-gray-300 text-3xl"></i>
+                    <span class="text-gray-100 font-bold">Vercel</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-bash-plain text-gray-300 text-3xl"></i>
+                    <span class="text-gray-100 font-bold">Bash</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-linux-plain text-gray-300 text-3xl"></i>
+                    <span class="text-gray-100 font-bold">Linux</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="devicon-archlinux-plain colored text-3xl"></i>
+                    <span class="text-gray-100 font-bold">ArchLinux</span>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="hidden grid grid-cols-1 sm:gap-3 sm:grid-cols-[1fr_420px] [grid-template-areas:'h2'_'div'_'form'] sm:[grid-template-areas:'h2_h2'_'div_form'] w-full max-w-200 mx-auto p-4 md:p-7 mt-2 mb-5 bg-[rgb(6_29_39)] rounded-lg">
+            <h2 class="[grid-area:h2] font-[Archivo_Black] text-[10px] md:text-[15px] text-left text-gray-100 font-bold uppercase border-b-[4px] border-b-sky-500 pb-3"><span class="text-sky-300">//</span> Fale Comigo</h2>
+            <div class="pt-7 flex flex-col">
+                <p class="text-[13px] sm:text-[15px] text-center sm:text-left text-gray-100 font-bold pb-5">Quer conversar sobre um projeto, oportunidade ou trocar uma ideia?</p>
+                <p class="text-[13px] sm:text-[15px] text-center sm:text-left text-gray-100 font-bold pb-5">Envie uma mensagem pelo formulário ou acesse meus links abaixo.</p>
+                <span class="text-sky-300 font-bold mr-2 text-[15px] sm:text-[15px] text-center sm:text-left">github: <a class="text-[15px] sm:text-[15px] text-left text-gray-100 font-bold" href="#">github.com/josejrti</a></span>
+                <span class="text-sky-300 font-bold mr-2 text-[15px] sm:text-[15px] text-center sm:text-left">email: <a class="text-[15px] sm:text-[15px] text-left text-gray-100 font-bold" href="#">jssj2@discente.ifpe.edu.br</a></span>
+                <span class="text-sky-300 font-bold mr-2 text-[15px] sm:text-[15px] text-center sm:text-left">linkedin: <a class="text-[15px] sm:text-[15px] text-left text-gray-100 font-bold" href="#">linkedin.com/josejrti</a></span>
+                <span class="text-sky-300 font-bold mr-2 text-[15px] sm:text-[15px] text-center sm:text-left">instagram: <a class="text-[15px] sm:text-[15px] text-left text-gray-100 font-bold" href="#">instagram.com/josejrti</a></span>
+                <p class="text-[15px] sm:text-[15px] text-center sm:text-left text-gray-100 font-bold pt-5">Será um prazer conversar com você!</p>
+            </div>
+            <form id="contact-form" class="[grid-area:form] flex flex-col bg-[rgb(9_44_59)] rounded-lg mt-5 mb-1 p-5">
+                <label for="nome" class="text-gray-100 text-[15px] font-bold pb-1">nome</label>
+                <input type="text" id="nome" name="nome" required class="text-gray-100 bg-[rgb(4_20_27)] p-2 rounded-lg mb-3" placeholder="Seu Nome">
+                <label for="email" class="text-gray-100 text-[15px] font-bold pb-1">email</label>
+                <input type="email" id="email" name="email" required class="text-gray-100 bg-[rgb(4_20_27)] p-2 rounded-lg mb-3" placeholder="email@example.com">
+                <label for="mensagem" class="text-gray-100 text-[15px] font-bold pb-1">mensagem</label>
+                <textarea id="mensagem" name="mensagem" required class=" h-[100px] text-gray-100 bg-[rgb(4_20_27)] p-2 rounded-lg" placeholder="Sua Mensagem"></textarea>
+                <button type="submit" class="w-[100%] h-[35px] bg-sky-500 hover:bg-sky-400 text-[8px] lg:text-[12px] rounded-lg font-bold cursor-pointer mt-3">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+    <footer class="bg-[rgb(3_17_22)] p-5">
+        <p class="text-center text-[10px] text-gray-100 md:text-sm tracking-wider font-bold"><a href="https://github.com/josejrti" target="_blank" title="José Júnior">José Júnior</a> Desenvolvedor | 2026</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
