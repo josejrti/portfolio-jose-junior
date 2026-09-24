@@ -1,4 +1,10 @@
 const form = document.querySelector("#contact-form");
+const menuBtn = document.querySelector("#menu-btn");
+const menu = document.querySelector("#responsive-menu");
+
+menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -19,3 +25,5 @@ form.addEventListener("submit", async (event) => {
         alert("Erro ao enviar mensagem.");
     }
 });
+
+

@@ -89,6 +89,10 @@ nav ul li a:active {
     justify-content: flex-end;
 }
 
+.menu-btn, #responsive-menu {
+    display: none;
+}
+
 .main {
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -342,6 +346,7 @@ nav ul li a:active {
     border:1px solid var(--my-blue-border);
     border-radius:15px;
     padding:30px;
+    text-align: center;
 }
 
 .skills #java i {
@@ -426,7 +431,7 @@ nav ul li a:active {
     font-family: "Sora", sans-serif;
     font-size:1rem;
     border-bottom: 1px solid var(--my-blue);
-    padding-bottom:5px;
+    padding-bottom:10px;
 }
 
 .card p {
@@ -660,30 +665,65 @@ nav ul li a:active {
     }
 
     .header {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "h1"
-        "nav";
+        grid-template-columns: 1fr auto 1fr;
         padding: 15px 20px;
-        gap: 15px;
-        text-align: center;
+        gap: 0px;
+        align-items: center;
     }
 
     .header h1 {
+        grid-column: 2;
         font-size: 0.9rem;
     }
 
     .header nav ul {
+        display:none;
+    }
+
+    .menu-btn {
+        grid-column: 3;
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-top:-3px;
+    }
+
+    #responsive-menu {
+        display: none;
+        position: absolute;
+        top: 52px;
+        right: 0;
+        width: 100%;
+        padding-top:30px;
+        flex-direction: column;
         justify-content: center;
-        gap: 10px;
+        align-items: center;
+        background-color: rgb(4 20 27 / 0.95);
     }
 
-    ul li {
-        margin-left: 0;
+    #responsive-menu.active {
+        display: flex;
     }
 
-    nav ul li a:link {
-        font-size: 0.75rem;
+    #responsive-menu a:link {
+        text-decoration: none;
+        color:var(--secondary-color);
+        font-size:0.9rem;
+        margin-bottom: 30px;;
+        transition: 0.5s;
+    }
+
+    #responsive-menu a:visited {
+        color:var(--secondary-color);
+    }
+    #responsive-menu a:hover {
+        color:var(--my-blue);
+    }
+    #responsive-menu a:active {
+        color:var(--secondary-color);
     }
 
     .main {
@@ -704,7 +744,7 @@ nav ul li a:active {
         "cont"
         "code";
         gap: 40px;
-        padding-top: 120px;
+        padding-top: 90px;
         padding-bottom: 30px;
     }
 
@@ -839,7 +879,7 @@ nav ul li a:active {
     }
 
     .welcome-sec {
-        padding-top:110px;
+        padding-top:90px;
         text-align: center;
     }
 
@@ -849,26 +889,30 @@ nav ul li a:active {
 
     .welcome-sec-cont h2,
     .welcome-sec-cont strong {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .welcome-sec-cont p {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     .welcome-sec-cont a:link {
         margin:auto;
         margin-top:10px;
-        font-size:0.6rem;
-        width:100px;
-        height:30px;
-        line-height: 30px;
+        font-size:0.9rem;
+        width:150px;
+        height:35px;
+        line-height: 35px;
     }
 
     .welcome-sec-code .code {
         padding: 15px;
-        font-size: 0.65rem;
+        font-size: 0.75rem;
         text-align: left;
+    }
+
+    .readme-sec {
+        border-bottom: 1px solid var(--my-blue-border);
     }
 
     .skills #java,
@@ -881,4 +925,13 @@ nav ul li a:active {
     .skills #github {
         flex: 1 1 80px;
     }
+
+    .contact-sec h2 {
+        padding-bottom: 0;
+    }
+
+    #contact-form button { 
+    font-size: 0.8rem;
+    } 
+
 }
