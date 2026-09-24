@@ -1,0 +1,884 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+  --primary-color: rgb(4 20 27);
+  --secondary-color: rgb(255, 255, 255);
+  --my-blue: rgb(68, 143, 255);
+  --my-blue-border:  rgb(23, 42, 70);
+  --bg-cards:rgb(7, 33, 44);
+}
+
+body {
+    background-color:var(--primary-color);
+    color:var(--secondary-color);
+}
+
+.header {
+    background-color: rgb(4 20 27 / 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "h1 nav"
+    ;
+    border-bottom:1px solid var(--my-blue-border);
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:100px;
+    padding-right:100px;
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: 3px;
+}
+
+.header h1 {
+    grid-area: h1;
+    font-size: 1rem;
+}
+
+h1 span {
+    color:var(--my-blue);
+}
+
+.header nav {
+    grid-area: nav;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+nav ul li a:link {
+    text-decoration: none;
+    color:var(--secondary-color);
+    font-size:0.9rem;
+    transition: 0.5s;
+}
+
+nav ul li a:visited {
+    color:var(--secondary-color);
+}
+
+nav ul li a:hover {
+    color:var(--my-blue);
+}
+
+nav ul li a:active {
+    color:var(--secondary-color);
+}
+
+.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.main {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "welcome welcome"
+    "readme skills"
+    "projects projects"
+    "contact contact"
+    ;
+    column-gap: 80px;
+    padding-left:100px;
+    padding-right:100px;
+}
+
+.welcome-sec {
+    grid-area:welcome;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "cont code"
+    ;
+    gap:80px;
+    border-bottom:1px solid var(--my-blue-border);
+    padding-top:110px;
+    padding-bottom:40px;
+}
+
+.welcome-sec .welcome-sec-cont {
+    grid-area: cont;
+    display: grid;
+    grid-template-columns: fr;
+    grid-template-areas: 
+    "txt1"
+    "txt2"
+    "txt3"
+    "txt4"
+    "btn"
+    ;
+}
+
+.welcome-sec-cont #txt1 {
+    grid-area: txt1;
+    font-family: "JetBrains Mono", monospace;
+    font-size:0.8rem;
+}
+
+#txt1 span {
+    color:var(--my-blue);
+}
+
+.welcome-sec-cont h2 {
+    grid-area: txt2;
+    font-size: 4rem;
+    font-family: "Archivo Black", sans-serif;
+    padding-top:10px;
+}
+
+.welcome-sec-cont strong {
+    grid-area: txt3;
+    font-size: 4rem;
+    font-family: "Archivo Black", sans-serif;
+    color:var(--my-blue);
+    padding-bottom:10px;
+}
+
+.welcome-sec-cont p {
+    grid-area: txt4;
+    font-size: 1.3rem;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.welcome-sec-cont a:link {
+    grid-area: btn;
+    width:200px;
+    height:40px;
+    text-decoration: none;
+    background-color: var(--my-blue);
+    border-radius: 10px;
+    margin-top:20px;
+    font-family: "JetBrains Mono", monospace;
+    font-size:1rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    color:black;
+    transition:0.5s;
+}
+
+.welcome-sec-cont a:visited {
+    background-color: var(--my-blue);
+    color:black;
+}
+
+.welcome-sec-cont a:hover {
+    background-color:rgb(95, 156, 247);
+    color:black;
+}
+
+.welcome-sec-cont a:active {
+    background-color: var(--my-blue);
+    color:black;
+}
+
+.welcome-sec .welcome-sec-code {
+    grid-area: code;
+    display: grid;
+    align-content: center;
+}
+
+.welcome-sec-code .code {
+    background-color: rgb(5, 24, 32);
+    font-family: "JetBrains Mono", monospace;
+    font-size:0.9rem;
+    padding:30px;
+    border: 1px solid var(--my-blue-border);
+    border-radius:15px;
+}
+
+.code #code-title {
+    color:rgb(172, 172, 172);
+}
+
+.code p {
+    padding-top:10px;
+}
+
+.code p span {
+    color:rgb(101, 255, 247);
+}
+
+.coding {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    animation: escrever 6s steps(50) forwards;
+}
+
+.coding::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 2px;
+    height: 20px;
+    background-color: white;
+    animation: cursor 0.7s infinite;
+}
+
+@keyframes escrever {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        opacity: 0;
+    }
+}
+
+.readme-sec {
+    grid-area: readme;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "title title"
+    "cont cont"
+    ;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+.readme-sec h2 {
+    grid-area: title;
+    font-family: "JetBrains Mono", monospace;
+    font-size:1.3rem;
+    padding-bottom:30px;
+}
+
+.readme-sec h2 span {
+    color:var(--my-blue);
+    padding-right:3px;
+}
+
+.readme-sec .readme-sec-cont {
+    grid-area: cont;
+}
+
+.readme-sec .readme-sec-cont p {
+    font-family: "Inter", sans-serif;
+    font-size:1rem;
+    padding-bottom:15px;
+}
+
+.skills-sec {
+    grid-area: skills;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "txt"
+    "lang"
+    ;
+    padding-top:30px;
+    padding-bottom:30px;
+    align-content: start;
+}
+
+.skills-sec .skills {
+    grid-area: lang;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:20px;
+}
+
+.skills-sec h2 {
+    grid-area: txt;
+    font-family: "JetBrains Mono", monospace;
+    font-size:1.3rem;
+    padding-bottom:30px;
+}
+
+.skills-sec h2 span {
+    color:var(--my-blue);
+    padding-right:3px;
+}
+
+.skills i {
+    font-size:2.4rem;
+}
+
+.skills span {
+    font-family: "Sora", sans-serif;
+    font-size:0.8rem;
+}
+
+.skills #java, .skills #python, .skills #js,
+.skills #html, .skills #css, .skills #tailwind,
+.skills #git, .skills #github {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid var(--my-blue-border);
+    border-radius:15px;
+    padding:30px;
+}
+
+.skills #java i {
+    padding-bottom:5px;
+}
+
+.skills #python i {
+    padding-bottom:5px;
+}
+
+.skills #js i {
+    padding-bottom:5px;
+}
+
+.skills #html i {
+    padding-bottom:5px;
+}
+
+.skills #css i {
+    padding-bottom:5px;
+}
+
+.skills #tailwind i {
+    padding-bottom:5px;
+}
+
+
+.skills #git i {
+    padding-bottom:5px;
+}
+
+.skills #github i {
+    padding-bottom:5px;
+}
+
+.projects-sec {
+    grid-area: projects;
+    padding-top:30px;
+    padding-bottom:30px;
+    border-top:1px solid var(--my-blue-border);
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "title"
+    "cards"
+    ;
+    border-bottom:1px solid var(--my-blue-border);
+}
+
+.projects-sec h2 {
+    grid-area: title;
+    font-family: "JetBrains Mono", monospace;
+    font-size:1.3rem;
+    padding-bottom:30px;
+}
+
+.projects-sec h2 span {
+    color:var(--my-blue);
+    padding-right:3px;
+}
+
+.projects-sec .projects-sec-cards {
+    grid-area: cards;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:30px;
+}
+
+.projects-sec-cards .card {
+    background-color:var(--bg-cards);
+    padding-top:20px;
+    padding-bottom:20px;
+    width:260px;
+    padding-left:20px;
+    padding-right:20px;
+    border-radius:15px;
+    border:1px solid var(--my-blue-border);
+}
+
+.card h3 {
+    font-family: "Sora", sans-serif;
+    font-size:1rem;
+    border-bottom: 1px solid var(--my-blue);
+    padding-bottom:5px;
+}
+
+.card p {
+    font-family: "Inter", sans-serif;
+    font-size:1rem;
+    padding-top:15px;
+}
+
+.card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.card .tags span {
+    background-color: rgb(4, 19, 26);
+    color:white;
+    font-family: "Inter", sans-serif;
+    font-size:0.7rem;
+    padding:5px;
+    border-radius:10px;
+}
+
+.card .card-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-links a:link {
+    font-size:0.8rem;
+    font-family: "Inter", sans-serif;
+    color:white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.card-links a:visited {
+    color:white;
+    border-bottom:1px solid var(--my-blue);
+}
+
+.card-links a:hover {
+    color: rgb(204, 203, 203);
+}
+
+.card-links a:active {
+    color:white;
+}
+
+.card-links span {
+    font-size:0.5rem;
+    padding-left:4px;
+}
+
+.contact-sec {
+    grid-area: contact;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "title title"
+    "cont form"
+    ;
+    column-gap:80px;
+    padding-bottom:30px;
+    padding-top: 30px;
+}
+
+.contact-sec h2 {
+    grid-area: title;
+    font-family: "JetBrains Mono", monospace;
+    font-size:1.3rem;
+    padding-bottom:30px;
+}
+
+.contact-sec h2 span {
+    color:var(--my-blue);
+    padding-right:3px;
+}
+
+.contact-sec .contact-sec-cont {
+    grid-area: cont;
+    font-family: "Inter", sans-serif;
+    font-size:1rem;
+}
+
+.contact-sec-cont p {
+    padding-bottom:20px;
+}
+
+.contact-sec-cont-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-sec-cont-links span {
+    color: var(--my-blue);
+    padding-top:13px;
+}
+
+.contact-sec-cont-links a:link {
+    color: white;
+    font-size:1rem;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.contact-sec-cont-links a:visited {
+    color: white;
+}
+
+.contact-sec-cont-links a:hover {
+    color: rgb(204, 203, 203);
+}
+
+.contact-sec-cont-links a:active {
+    color: white;
+}
+
+
+#f-text-contact {
+    padding-top:27px;
+}
+
+#contact-form { 
+    grid-area: form; 
+    display: flex; 
+    flex-direction: column; 
+    background-color: rgb(8, 32, 41); 
+    border: 1px solid var(--my-blue-border);
+    border-radius: 8px;
+    padding:20px;
+}
+
+#contact-form label { 
+    font-family: "Inter", sans-serif;
+    color: rgb(243, 244, 246); 
+    font-size: 1rem; 
+    padding-bottom: 4px; 
+} 
+
+#contact-form input, #contact-form textarea {
+    color: rgb(243, 244, 246);
+    background-color: rgb(4, 20, 27);
+    padding: 8px; 
+    border-radius: 8px; 
+    border: none; 
+    margin-bottom: 12px; 
+    font-size: 1rem; 
+    font-family: "Inter", sans-serif;
+} 
+
+#contact-form textarea {
+    height: 100px; 
+} 
+
+#contact-form button { 
+    font-family: "JetBrains Mono", monospace; 
+    width: 100%; 
+    height: 35px; 
+    background-color: var(--my-blue);
+    color: rgb(0, 0, 0); 
+    font-size: 1rem;
+    border: none; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    margin-top: 12px; 
+} 
+
+#contact-form button:hover { 
+    background-color:rgb(95, 156, 247);
+}
+
+.footer {
+    padding:30px;
+    border-top:1px solid var(--my-blue-border);
+}
+
+.footer p {
+    font-family: "Inter", sans-serif;
+    font-size:1rem;
+    text-align:center;
+}
+
+@media (max-width: 900px) {
+
+    .header {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .main {
+        padding-left: 40px;
+        padding-right: 40px;
+        column-gap: 40px;
+    }
+
+    .welcome-sec {
+        gap: 40px;
+    }
+
+    .welcome-sec-cont h2,
+    .welcome-sec-cont strong {
+        font-size: 3rem;
+    }
+
+    .welcome-sec-cont p {
+        font-size: 1.1rem;
+    }
+
+    .projects-sec .projects-sec-cards {
+        justify-content: center;
+    }
+
+    .projects-sec-cards .card {
+        flex: 1 1 240px;
+        max-width: 300px;
+    }
+
+    .contact-sec {
+        column-gap: 40px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "h1"
+        "nav";
+        padding: 15px 20px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 0.9rem;
+    }
+
+    .header nav ul {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    ul li {
+        margin-left: 0;
+    }
+
+    nav ul li a:link {
+        font-size: 0.75rem;
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "welcome"
+        "readme"
+        "skills"
+        "projects"
+        "contact";
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .welcome-sec {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "cont"
+        "code";
+        gap: 40px;
+        padding-top: 120px;
+        padding-bottom: 30px;
+    }
+
+    .welcome-sec-cont h2,
+    .welcome-sec-cont strong {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+
+    .welcome-sec-cont p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .welcome-sec-cont a:link {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .welcome-sec-code .code {
+        padding: 20px;
+        font-size: 0.75rem;
+        overflow-x: auto;
+    }
+
+    .readme-sec {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .readme-sec .readme-sec-cont p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .skills-sec {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .skills-sec .skills {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .skills #java,
+    .skills #python,
+    .skills #js,
+    .skills #html,
+    .skills #css,
+    .skills #tailwind,
+    .skills #git,
+    .skills #github {
+        flex: 1 1 100px;
+        padding: 20px 10px;
+    }
+
+    .skills i {
+        font-size: 2rem;
+    }
+
+    .skills span {
+        font-size: 0.7rem;
+    }
+
+    .projects-sec {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .projects-sec .projects-sec-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .projects-sec-cards .card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .contact-sec {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "cont"
+            "form";
+
+        gap: 30px;
+    }
+
+    .contact-sec .contact-sec-cont {
+        font-size: 0.95rem;
+    }
+
+    #contact-form {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 25px 20px;
+    }
+
+    .footer p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 400px) {
+
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    .header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .header h1 {
+        font-size: 0.8rem;
+    }
+
+    nav ul li a:link {
+        font-size: 0.7rem;
+    }
+
+    .main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .welcome-sec {
+        padding-top:110px;
+        text-align: center;
+    }
+
+    .welcome-sec-cont #txt1 {
+        font-size:0.7rem;
+    }
+
+    .welcome-sec-cont h2,
+    .welcome-sec-cont strong {
+        font-size: 2rem;
+    }
+
+    .welcome-sec-cont p {
+        font-size: 0.7rem;
+    }
+
+    .welcome-sec-cont a:link {
+        margin:auto;
+        margin-top:10px;
+        font-size:0.6rem;
+        width:100px;
+        height:30px;
+        line-height: 30px;
+    }
+
+    .welcome-sec-code .code {
+        padding: 15px;
+        font-size: 0.65rem;
+        text-align: left;
+    }
+
+    .skills #java,
+    .skills #python,
+    .skills #js,
+    .skills #html,
+    .skills #css,
+    .skills #tailwind,
+    .skills #git,
+    .skills #github {
+        flex: 1 1 80px;
+    }
+}

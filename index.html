@@ -4,265 +4,264 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>José Júnior Portfólio</title>
-    <meta name="description" content="Portfólio de José Júnior, estudante de Análise e Desenvolvimento de Sistemas. Conheça meus projetos, tecnologias e experiências.">
-    <meta name="keywords" content="dev, programador, portfolio, projetos">
+    <meta name="description" content="Portfólio de José Júnior, desenvolvedor de software em formação atualmente focado em desenvolvimento web. Confira meus projetos e habilidades.">
+    <meta name="keywords" content="José Júnior, desenvolvedor web, portfólio, HTML, CSS, JavaScript, Tailwind CSS, desenvolvimento web, projetos web">
     <meta name="author" content="José Júnior">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="icon" href="images/i.png">
-    <style type="text/tailwindcss">
-        .button {
-            @apply uppercase font-[JetBrains_Mono] w-[100%] h-[30px] sm:w-[105px] sm:h-[30px] bg-sky-500 hover:bg-sky-400 transition duration-300 text-[12px] sm:text-[12px] rounded-lg font-bold cursor-pointer;
-        }
-        .readme-txt {
-            @apply font-[Sora] font-normal leading-7 text-[15px] md:text-[17px] text-left md:text-justify text-gray-100 pt-5;        }
-        .gt-link {
-            @apply font-[Sora] font-normal leading-7 text-[15px] md:text-[15px] text-gray-100 hover:text-sky-300 transition duration-300 font-bold;
-        }
-    </style>
+    <link rel="icon" href="images/fav.png">
 </head>
-<body class="grid-rows-3 bg-[rgb(4_20_27)]">
-    <header class="grid grid-cols-1 justify-items-center sm:justify-items-start [grid-template-areas:'img'_'txt1'_'txt2'_'txt3'_'txt4'_'nav'] sm:justify-center sm:grid-cols-[auto_450px] sm:[grid-template-areas:'img_txt1'_'img_txt2'_'img_txt3'_'img_txt4'_'img_nav'] ">
-        <span class="font-[Archivo_Black] text-[10px] sm:text-[13px] text-gray-100 text-center sm:text-left font-bold [grid-area:txt1] mt-3 sm:mt-10"><span class="text-sky-300">//</span> portfólio josé júnior</span>
-        <p class="font-[Archivo_Black] text-[30px] lg:text-[50px] text-center sm:text-left text-gray-100 [grid-area:txt2]">Olá, eu sou</p>
-        <p class="font-[Archivo_Black] text-[30px] text-sky-300 lg:text-[50px] text-center sm:text-left [grid-area:txt3] mt-[-10px] md:mt-[-10px]">José Júnior.</p>
-        <img src="images/image.jpg" alt="Foto José Júnior" class="[grid-area:img] w-40 h-40 sm:w-40 sm:h-40 lg:w-65 lg:h-65 border-sky-500 sm:mr-7 border-5 rounded-full mt-5 sm:mt-10">
-        <p class="font-bold text-[15px] text-center sm:text-left text-gray-100 [grid-area:txt4] pr-5 pl-5 sm:pr-0 sm:pl-0 sm:pb-5">
-            Sou Estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de Pernambuco (IFPE) - Campus Palmares.
-        </p>
-        <nav class="[grid-area:nav] w-[100%]">
-            <ul class="flex flex-col sm:flex-row justify-start p-5 sm:p-0">
-                <li class="sm:pr-2 pb-2 sm:pb-0">
-                    <button class="button" onclick="showReadme()">Sobre Mim</button>
-                </li>
-                <li class="sm:pr-2 pb-2 sm:pb-0">
-                    <button class="button" onclick="showProjects()">Projetos</button>
-                </li>
-                <li class="sm:pr-2 pb-2 sm:pb-0">
-                    <button class="button" onclick="showTechs()">Tecnologias</button>
+<body>
+    <header class="header">
+        <h1>josejunior<span>dev</span>.com</h1>
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="#readme" title="sobre">sobre</a>
                 </li>
                 <li>
-                    <button class="button" onclick="showContact()">Contato</button>
+                    <a href="#projects" title="projetos">projetos</a>
+                </li>
+                <li>
+                    <a href="#contact" title="contato">contato</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main class="flex flex-col sm:mt-10 pr-5 pl-5">
-        <section id="readme" class="w-full max-w-200 mx-auto p-4 md:p-7 mt-2 mb-5 bg-[rgb(6_29_39)] rounded-lg">
-            <h2 class="font-[Archivo_Black] text-[13px] md:text-[15px] text-left text-gray-100 font-bold uppercase border-b-[2px] border-b-sky-500 pb-3"><span class="text-sky-300">//</span> Sobre Mim</h2>
-            <p class="readme-txt">Atualmente, estou construindo minha base como <span class="text-sky-300">desenvolvedor de software</span> e colocando meus conhecimentos em prática por meio de projetos próprios e atividades acadêmicas.</p>
-            <p class="readme-txt">
-                Meu objetivo é desenvolver uma base técnica sólida para atuar profissionalmente no <span class="text-sky-300">desenvolvimento de software,</span> criando sistemas funcionais, bem estruturados e seguindo boas práticas de desenvolvimento.
-            </p>
-            <p class="readme-txt">
-                Tenho explorado diferentes áreas da tecnologia, como <span class="text-sky-300">Programação Orientada a Objetos, Estruturas de Dados, Banco de Dados, Desenvolvimento Web, Inteligência Artificial e Machine Learning.</span>
-            </p>
-            <p class="readme-txt">
-                Mais do que simplesmente fazer um código funcionar, busco compreender o raciocínio por trás de cada solução. Desenvolvo minha lógica de programação por meio da análise de problemas, explorando diferentes abordagens e transformando essas análises em algoritmos eficientes e bem estruturados.
-            </p>
-        </section>
-        <section id="projects" class="hidden w-full max-w-200 mx-auto p-4 md:p-7 mt-2 mb-5 bg-[rgb(6_29_39)] rounded-lg grid grid-cols-1 sm:grid-cols-2 [grid-template-areas:'h2'_'card1'_'card2'_'card3'_'card4'_'card5'_'card6'_'card7'_'card8'] sm:[grid-template-areas:'h2_h2'_'card1_card2'_'card3_card4'_'card5_card6'_'card7_card8'] gap-5">
-            <h2 class="[grid-area:h2] font-[Archivo_Black] text-[13px] md:text-[15px] text-left text-gray-100 font-bold uppercase border-b-[2px] border-b-sky-500 pb-3"><span class="text-sky-300">//</span> Meus Projetos</h2>
-            <div class="[grid-area:card1] bg-[rgb(9_44_59)] rounded-lg p-5 border border-sky-900 hover:border-sky-700 transition duration-300">
-                <div class="flex flex-wrap justify-between border-b border-b-sky-900">
-                    <h3 class="font-[Sora] font-bold leading-7 text-[14px] sm:text-[19px] text-sky-300 font-bold pb-2">Calculadora</h3>
-                    <img class="w-[75px] pb-2" src="https://skillicons.dev/icons?i=html,css,js&theme=light" alt="Tecnologias">
-                </div>
-                <p class="font-[Sora] text-left font-normal leading-7 text-[13px] sm:text-[15px] text-gray-100 mt-4 mb-4">Aplicação web de calculadora para realizar operações matemáticas básicas, feita com interface interativa para entrada de valores, execução dos cálculos e exibição dos resultados.</p>
-                <div class="flex justify-between pt-4 border-t border-t-sky-900">
-                    <a href="https://projetos-para-portfolio.vercel.app/calculadora-simples" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto<span class="text-[10px] font-medium pl-2">↗</span></a>
-                    <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/calculadora-simples" target="_blank" title="GitHub" class="gt-link">GitHub<span class="text-[10px] font-medium ml-2">↗</span></a>
-                </div>
+    <main class="main">
+        <section class="welcome-sec">
+            <div class="welcome-sec-cont">
+                <span id="txt1"><span>// </span>portfólio josé júnior</span>
+                <h2>Olá, eu sou</h2>
+                <strong>José Júnior.</strong>
+                <p>Desenvolvedor de Software, atualmente focado em Desenvolvimento Web.</p>
+                <a href="#projects" title="Ver Projetos">Ver Projetos</a>
             </div>
-            <div class="[grid-area:card2] bg-[rgb(9_44_59)] rounded-lg p-5 border border-sky-900 hover:border-sky-700 transition duration-300">
-                <div class="flex flex-wrap justify-between border-b border-b-sky-900">
-                    <h3 class="font-[Sora] font-bold leading-7 text-[14px] sm:text-[19px] text-sky-300 font-bold pb-2">Gerador de Senhas</h3>
-                    <img class="w-[75px] pb-2" src="https://skillicons.dev/icons?i=html,css,js&theme=light" alt="Tecnologias">
-                </div>
-                <p class="font-[Sora] text-left font-normal leading-7 text-[13px] sm:text-[15px] text-gray-100 mt-4 mb-4">Aplicação web para geração de senhas personalizadas, permitindo definir a quantidade de caracteres por meio de um controle deslizante e gerar uma nova senha diretamente no navegador.</p>
-                <div class="flex justify-between pt-4 border-t border-t-sky-900">
-                    <a href="https://projetos-para-portfolio.vercel.app/gerador-de-senhas" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto<span class="text-[10px] font-medium pl-2">↗</span></a>
-                    <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/gerador-de-senhas" target="_blank" title="GitHub" class="gt-link">GitHub<span class="text-[10px] font-medium pl-2">↗</span></a>
-                </div>
-            </div>
-            <div class="[grid-area:card3] bg-[rgb(9_44_59)] rounded-lg p-5 border border-sky-900 hover:border-sky-700 transition duration-300">
-                <div class="flex flex-wrap justify-between border-b border-b-sky-900">
-                    <h3 class="font-[Sora] font-bold leading-7 text-[14px] sm:text-[19px] text-sky-300 pb-2">Calculadora de IMC</h3>
-                    <img class="w-[75px] pb-2" src="https://skillicons.dev/icons?i=html,css,js&theme=light" alt="Tecnologias">
-                </div>
-                <p class="font-[Sora] text-left font-normal leading-7 text-[13px] sm:text-[15px] text-gray-100 mt-4 mb-4">Aplicação web desenvolvida para calcular o Índice de Massa Corporal (IMC) a partir dos valores de peso e altura informados pelo usuário, apresentando o resultado do cálculo de forma simples e direta.</p>
-                <div class="flex justify-between pt-4 border-t border-t-sky-900">
-                    <a href="https://projetos-para-portfolio.vercel.app/calculadora-imc" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto<span class="text-[10px] font-medium pl-2">↗</span></a>
-                    <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/calculadora-imc" target="_blank" title="GitHub" class="gt-link">GitHub<span class="text-[10px] font-medium pl-2">↗</span></a>
-                </div>
-            </div>
-            <div class="[grid-area:card4] bg-[rgb(9_44_59)] rounded-lg p-5 border border-sky-900 hover:border-sky-700 transition duration-300">
-                <div class="flex flex-wrap justify-between border-b border-b-sky-900">
-                    <h3 class="font-[Sora] font-bold leading-7 text-[14px] sm:text-[19px] text-sky-300 pb-2">Python para Iniciantes</h3>
-                    <img class="w-[25px] pb-2" src="https://skillicons.dev/icons?i=python&theme=dark" alt="Tecnologias">
-                </div>
-                <p class="font-[Sora] text-left font-normal leading-7 text-[13px] sm:text-[15px] text-gray-100 mt-4 mb-4">Coleção de algoritmos desenvolvidos em Python para praticar lógica de programação, trabalhando conceitos fundamentais como variáveis, estruturas condicionais, entre outros.</p>
-                <div class="flex justify-between pt-4 border-t border-t-sky-900">
-                    <a href="https://github.com/josejrti/PythonParaIniciantes" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto<span class="text-[10px] font-medium pl-2">↗</span></a>
-                    <a href="https://github.com/josejrti/PythonParaIniciantes" target="_blank" title="GitHub" class="gt-link">GitHub<span class="text-[10px] font-medium pl-2">↗</span></a>
-                </div>
-            </div>
-            <div class="[grid-area:card5] bg-[rgb(9_44_59)] rounded-lg p-5 border border-sky-900 hover:border-sky-700 transition duration-300">
-                <div class="flex flex-wrap justify-between border-b border-b-sky-900">
-                    <h3 class="font-[Sora] font-bold leading-7 text-[14px] sm:text-[19px] text-sky-300 pb-2">Data e Hora</h3>
-                    <img class="w-[75px] pb-2" src="https://skillicons.dev/icons?i=html,css,js&theme=dark" alt="Tecnologias">
-                </div>
-                <p class="font-[Sora] text-left font-normal leading-7 text-[13px] sm:text-[15px] text-gray-100 mt-4 mb-4">Aplicação web desenvolvida para exibir a data e o horário atual em tempo real, com atualização automática das informações diretamente no navegador.</p>
-                <div class="flex justify-between pt-4 border-t border-t-sky-900">
-                    <a href="https://projetos-para-portfolio.vercel.app/data-e-hora" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto<span class="text-[10px] font-medium pl-2">↗</span></a>
-                    <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/data-e-hora" target="_blank" title="GitHub" class="gt-link">GitHub<span class="text-[10px] font-medium pl-2">↗</span></a>
-                </div>
-            </div>
-            <div class="[grid-area:card6] bg-[rgb(9_44_59)] rounded-lg p-5 border border-sky-900 hover:border-sky-700 transition duration-300">
-                <div class="flex flex-wrap justify-between border-b border-b-sky-900">
-                    <h3 class="font-[Sora] font-bold leading-7 text-[14px] sm:text-[19px] text-sky-300 pb-2">Galeria de Imagens</h3>
-                    <img class="w-[100px] pb-2" src="https://skillicons.dev/icons?i=html,css,js,tailwindcss&theme=dark" alt="Tecnologias">
-                </div>
-                <p class="font-[Sora] text-left font-normal leading-7 text-[13px] sm:text-[15px] text-gray-100 mt-4 mb-4">Aplicação web desenvolvida para exibir imagens de forma organizada e interativa, utilizando uma interface responsiva para facilitar a visualização e navegação.</p>
-                <div class="flex justify-between pt-4 border-t border-t-sky-900">
-                    <a href="https://projetos-para-portfolio.vercel.app/galeria-de-imagens" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto<span class="text-[10px] font-medium pl-2">↗</span></a>
-                    <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/galeria-de-imagens" target="_blank" title="GitHub" class="gt-link">GitHub<span class="text-[10px] font-medium pl-2">↗</span></a>
-                </div>
-            </div>
-            <div class="[grid-area:card7] bg-[rgb(9_44_59)] mb-1 rounded-lg p-5 border border-sky-900 hover:border-sky-700 transition duration-300">
-                <div class="flex flex-wrap justify-between border-b border-b-sky-900">
-                    <h3 class="font-[Sora] font-bold leading-7 text-[14px] sm:text-[19px] text-sky-300 pb-2">Uso Seguro da Internet</h3>
-                    <img class="w-[75px] pb-2" src="https://skillicons.dev/icons?i=html,css,js&theme=dark" alt="Tecnologias">
-                </div>
-                <p class="font-[Sora] text-left font-normal leading-7 text-[13px] sm:text-[15px] text-gray-100 mt-4 mb-4">Website desenvolvido para apresentar conteúdos e orientações sobre o uso seguro da internet, abordando conceitos relacionados à segurança da informação para uma navegação protegida.</p>
-                <div class="flex justify-between pt-4 border-t border-t-sky-900">
-                    <a href="https://usosegurodainternet.vercel.app/" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto<span class="text-[10px] font-medium pl-2">↗</span></a>
-                    <a href="https://github.com/josejrti/UsoSeguroDaInternet" target="_blank" title="GitHub" class="gt-link">GitHub<span class="text-[10px] font-medium pl-2">↗</span></a>
-                </div>
-            </div>
-            <div class="[grid-area:card8] bg-[rgb(9_44_59)] mb-1 rounded-lg p-5 border border-sky-900 hover:border-sky-700 transition duration-300">
-                <div class="flex flex-wrap justify-between border-b border-b-sky-900">
-                    <h3 class="font-[Sora] font-bold leading-7 text-[14px] sm:text-[19px] text-sky-300 pb-2">Portal de Noticias</h3>
-                    <img class="w-[100px] pb-2" src="https://skillicons.dev/icons?i=html,css,js,tailwindcss&theme=dark" alt="Tecnologias">
-                </div>
-                <p class="font-[Sora] text-left font-normal leading-7 text-[13px] sm:text-[15px] text-gray-100 mt-4 mb-4">Portal de notícias com uma interface para exibição e organização de notícias por diferentes categorias. O projeto possui uma página inicial com as principais notícias e artigos.</p>
-                <div class="flex justify-between pt-4 border-t border-t-sky-900">
-                    <a href="https://projetos-para-portfolio.vercel.app/portal-de-noticias" target="_blank" title="Ver Projeto" class="gt-link">Ver Projeto<span class="text-[10px] font-medium pl-2">↗</span></a>
-                    <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/portal-de-noticias" target="_blank" title="GitHub" class="gt-link">GitHub<span class="text-[10px] font-medium pl-2">↗</span></a>
+            <div class="welcome-sec-code">
+                <div class="code">
+                    <p>const josejunior = {</p>
+                    <p><span>name</span>: "José Júnior",</p>
+                    <p><span>skills</span>: ["Java","Python","JS","HTML","CSS"],</p>
+                    <p class="coding"><span>status</span>: "Learning, practicing, and growing."</p>
+                    <p>}</p>
                 </div>
             </div>
         </section>
-        <section id="techs" class="hidden w-full max-w-200 mx-auto p-4 md:p-7 mt-2 mb-5 bg-[rgb(6_29_39)] rounded-lg flex-col">
-            <h2 class="font-[Archivo_Black] text-[13px] md:text-[15px] text-left text-gray-100 font-bold uppercase border-b-[2px] border-b-sky-500 pb-3"><span class="text-sky-300">//</span> Tecnologias</h2>
-            <p class="font-[Sora] font-normal leading-7 text-gray-100 text-[15px] sm:text-[17px] mb-5 mt-5 text-center">Linguagens & Frameworks</p> 
-            <div class="flex flex-wrap gap-6 bg-[rgb(7_36_48)] justify-center rounded-lg p-3">
-                <div class="flex items-center gap-2">
-                    <i class="devicon-python-plain colored text-3xl"></i>
-                    <span class="font-[Sora] font-bold text-gray-100 font-bold">Python</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-java-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">Java</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-javascript-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">JavaScript</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-html5-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">HTML5</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-css3-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">CSS3</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-tailwindcss-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">TailWind</span>
-                </div>
+        <section id="readme" class="readme-sec">
+            <h2><span>//</span>sobre mim</h2>
+            <div class="readme-sec-cont">
+                <p>
+                    Sou Estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de Pernambuco (IFPE) - Campus Palmares. 
+                </p>
+                <p>
+                    Atualmente, estou construindo minha base como desenvolvedor de software em formação, colocando meus conhecimentos em prática por meio de projetos próprios e atividades acadêmicas. Neste momento, meu foco está no desenvolvimento web, área em que venho aprofundando meus conhecimentos e desenvolvendo projetos.
+                </p>
+                <p>
+                    Meu objetivo é construir uma base técnica sólida para atuar profissionalmente no desenvolvimento de software, criando sistemas funcionais, bem estruturados e seguindo boas práticas de desenvolvimento.
+                </p>
+                <p>
+                    Tenho explorado diferentes áreas da tecnologia, como Programação Orientada a Objetos, Estruturas de Dados, Banco de Dados, Desenvolvimento Web, Inteligência Artificial e Machine Learning.
+                </p>
             </div>
-            <p class="font-[Sora] font-normal leading-7 text-gray-100 text-[15px] sm:text-[17px] mb-5 mt-5 text-center">Editores & IDEs</p> 
-            <div class="flex flex-wrap gap-6 bg-[rgb(7_36_48)] justify-center rounded-lg p-3">
-                <div class="flex items-center gap-2">
-                    <i class="devicon-vscode-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">VsCode</span>
+        </section>
+        <section class="skills-sec">
+            <h2><span>//</span>habilidades</h2>
+            <div class="skills">
+                <div id="java">
+                    <i class="devicon-java-plain"></i>
+                    <span>Java</span>
                 </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-eclipse-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">Eclipse</span>
+                <div id="python">
+                    <i class="devicon-python-plain colored"></i>
+                    <span>Python</span>
                 </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-intellij-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">Intellij</span>
+                <div id="js">
+                    <i class="devicon-javascript-plain colored"></i>
+                    <span>Java Script</span>
                 </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-pycharm-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">PyCharm</span>
+                <div id="html">
+                    <i class="devicon-html5-plain colored"></i>
+                    <span>HTML</span>
                 </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-vim-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">Vim</span>
+                <div id="css">
+                    <i class="devicon-css3-plain colored"></i>
+                    <span>CSS</span>
                 </div>
-                    <div class="flex items-center gap-2">
-                    <i class="devicon-neovim-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">NeoVim</span>
+                <div id="tailwind">
+                    <i class="devicon-tailwindcss-plain colored"></i>
+                    <span>Tailwind CSS</span>
                 </div>
-            </div>
-            <p class="font-[Sora] font-normal leading-7 text-gray-100 text-[15px] sm:text-[17px] mb-5 mt-5 text-center">Ferramentas & Sistemas</p> 
-            <div class="flex flex-wrap gap-6 bg-[rgb(7_36_48)] justify-center rounded-lg mb-1 p-3">
-                <div class="flex items-center gap-2">
-                    <i class="devicon-git-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">Git</span>
+                <div id="git">
+                    <i class="devicon-git-plain colored"></i>
+                    <span>Git</span>
                 </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-github-plain text-gray-300 text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">GitHub</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-vercel-plain text-gray-300 text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">Vercel</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-bash-plain text-gray-300 text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">Bash</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-linux-plain text-gray-300 text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">Linux</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="devicon-archlinux-plain colored text-3xl"></i>
-                    <span class="font-[Sora] text-gray-100 font-bold">ArchLinux</span>
+                <div id="github">
+                    <i class="devicon-github-plain"></i>
+                    <span>GitHub</span>
                 </div>
             </div>
         </section>
-        <section id="contact" class="hidden grid grid-cols-1 sm:gap-5 sm:grid-cols-[1fr_420px] [grid-template-areas:'h2'_'div'_'form'] sm:[grid-template-areas:'h2_h2'_'div_form'] w-full max-w-200 mx-auto p-4 md:p-7 mt-2 mb-5 bg-[rgb(6_29_39)] rounded-lg">
-            <h2 class="[grid-area:h2] font-[Archivo_Black] text-[13px] md:text-[15px] text-left text-gray-100 font-bold uppercase border-b-[2px] border-b-sky-500 pb-3"><span class="text-sky-300">//</span> Fale Comigo</h2>
-            <div class="pt-7 flex flex-col">
-                <p class="font-[Sora] font-normal leading-7 text-[15px] text-center sm:text-left text-gray-100 pb-5">Quer conversar sobre um projeto, oportunidade ou trocar uma ideia?</p>
-                <p class="font-[Sora] font-normal leading-7 text-[15px] text-center sm:text-left text-gray-100 pb-5">Envie uma mensagem pelo formulário ou acesse meus links abaixo.</p>
-                <span class="font-[Sora] font-normal leading-7 text-sky-300 mr-2 text-[14px] text-center sm:text-left">github: <a class="text-[15px] sm:text-[15px] text-left text-gray-100" href="https://github.com/josejrti" target="_blank" title="github.com/josejrti">github.com/josejrti</a></span>
-                <span class="font-[Sora] font-normal leading-7 text-sky-300 mr-2 text-[14px] text-center sm:text-left">email: <a class="text-[15px] sm:text-[15px] text-left text-gray-100" href="mailto:jssj2@discente.ifpe.edu.br" title="jssj2@discente.ifpe.edu.br">jssj2@discente.ifpe.edu.br</a></span>
-                <span class="font-[Sora] font-normal leading-7 text-sky-300 mr-2 text-[14px] text-center sm:text-left">linkedin: <a class="text-[15px] sm:text-[15px] text-left text-gray-100" href="https://linkedin.com/in/josejuniordev" target="_blank" title="linkedin.com/li/josejuniordev">linkedin.com/in/josejuniordev</a></span>
-                <span class="font-[Sora] font-normal leading-7 text-sky-300 mr-2 text-[14px] text-center sm:text-left">instagram: <a class="text-[15px] sm:text-[15px] text-left text-gray-100" href="https://instagram.com/josejrdev" target="_blank" title="instagram.com/josejrti">instagram.com/josejrdev</a></span>
-                <p class="font-[Sora] font-normal leading-7 text-[15px] text-center sm:text-left text-gray-100 pt-5">Será um prazer conversar com você!</p>
+        <section id="projects" class="projects-sec">
+            <h2><span>//</span>meus projetos</h2>
+            <div class="projects-sec-cards">
+                <div class="card">
+                    <h3>Calculadora</h3>
+                    <p>
+                        Calculadora Web que realiza as quatro operações básicas da matemática.
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://projetos-para-portfolio.vercel.app/calculadora-simples" target="_blank" title="Ver Projeto">Ver Projeto<span> ↗</span></a>
+                        <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/calculadora-simples" target="_blank" title="GitHub">GitHub<span> ↗</span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Uso Seguro da Internet</h3>
+                    <p>
+                        Site responsivo para projeto de curso sobre Segurança da informação.
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://usosegurodainternet.vercel.app/" target="_blank" title="Ver Projeto">Ver Projeto<span> ↗</span></a>
+                        <a href="https://github.com/josejrti/UsoSeguroDaInternet" target="_blank" title="Ver Projeto">GitHub<span> ↗</span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Gerador de Senhas</h3>
+                    <p>
+                        Gerador de senhas dificeis de acordo com quantidade de caracteres selecionada.
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://projetos-para-portfolio.vercel.app/gerador-de-senhas" target="_blank" title="Ver Projeto">Ver Projeto<span> ↗</span></a>
+                        <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/gerador-de-senhas" target="_blank" title="GitHub">GitHub<span> ↗</span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Data e Hora</h3>
+                    <p>
+                        Site que exibe a data e o horário atual com atualização automática.
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://projetos-para-portfolio.vercel.app/data-e-hora" target="_blank" title="Ver Projeto">Ver Projeto<span> ↗</span></a>
+                        <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/data-e-hora" target="_blank" title="GitHub">GitHub<span> ↗</span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Python para Iniciantes</h3>
+                    <p>
+                        Coleção de Algoritmos para aprender lógica de programação com Python. 
+                    </p>
+                    <div class="tags">
+                        <span>Python</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/josejrti/PythonParaIniciantes" target="_blank" title="Ver Projetos">Ver Projeto<span> ↗</span></a>
+                        <a href="https://github.com/josejrti/PythonParaIniciantes" target="_blank" title="GitHub">GitHub<span> ↗</span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Calculadora de IMC</h3>
+                    <p>
+                        Calculadora web que calcula o Índice de Massa Corporal (IMC).
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://projetos-para-portfolio.vercel.app/calculadora-imc" target="_blank" title="Ver Projeto">Ver Projeto<span> ↗</span></a>
+                        <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/calculadora-imc" target="_blank" title="GitHub">GitHub<span> ↗</span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Portal de Notícias</h3>
+                    <p>
+                        Portal de notícias interface para exibição de últimas notícias e artigos.
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>TailWind</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://projetos-para-portfolio.vercel.app/portal-de-noticias" target="_blank" title="Ver Projetos">Ver Projeto<span> ↗</span></a>
+                        <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/portal-de-noticias" target="_blank" title="GitHub">GitHub<span> ↗</span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Galeria de Imagens</h3>
+                    <p>
+                        Site desenvolvido para exibir imagens de forma organizada e interativa.
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>TailWind</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://projetos-para-portfolio.vercel.app/galeria-de-imagens" target="_blank" title="Ver Projetos">Ver Projeto<span> ↗</span></a>
+                        <a href="https://github.com/josejrti/projetos-para-portfolio/tree/main/galeria-de-imagens" target="_blank" title="GitHub">GitHub<span> ↗</span></a>
+                    </div>
+                </div>
+
             </div>
-            <form id="contact-form" class="[grid-area:form] flex flex-col bg-[rgb(9_44_59)] rounded-lg mt-5 mb-1 p-5">
-                <label for="nome" class="font-[JetBrains_Mono] text-gray-100 text-[15px] font-bold pb-1">nome</label>
-                <input type="text" id="nome" name="nome" required class="text-gray-100 bg-[rgb(4_20_27)] p-2 rounded-lg mb-3" placeholder="Seu Nome">
-                <label for="email" class="font-[JetBrains_Mono] text-gray-100 text-[15px] font-bold pb-1">email</label>
-                <input type="email" id="email" name="email" required class="text-gray-100 bg-[rgb(4_20_27)] p-2 rounded-lg mb-3" placeholder="email@example.com">
-                <label for="mensagem" class="font-[JetBrains_Mono] text-gray-100 text-[15px] font-bold pb-1">mensagem</label>
-                <textarea id="mensagem" name="mensagem" required class=" h-[100px] text-gray-100 bg-[rgb(4_20_27)] p-2 rounded-lg" placeholder="Sua Mensagem"></textarea>
-                <button type="submit" class="font-[JetBrains_Mono] uppercase w-[100%] h-[35px] bg-sky-500 hover:bg-sky-400 text-[8px] lg:text-[12px] rounded-lg font-bold cursor-pointer mt-3">Enviar Mensagem</button>
+        </section>
+        <section id="contact" class="contact-sec">
+            <h2><span>//</span>contato</h2>
+            <div class="contact-sec-cont">
+                <p>
+                    Quer conversar sobre um projeto, oportunidade ou trocar uma ideia?
+                </p>
+                <p>
+                    Envie uma mensagem pelo formulário ou acesse meus links.
+                </p>
+                <div class="contact-sec-cont-links">
+                    <span>github: <a href="#" target="_blank" title="github.com/josejrti">github.com/josejrti</a></span>
+                    <span>linkedin: <a href="#" target="_blank" title="linkedin.com/in/josejuniordev">linkedin.com/in/josejuniordev</a></span>
+                    <span>email: <a href="#" target="_blank" title="jssj2@discente.ifpe.edu.br">jssj2@discente.ifpe.edu.br</a></span>
+                    <span>instagram: <a href="#" target="_blank" title="instagram.com/josejrdev">instagram.com/josejrdev</a></span>
+                </div>
+                <p id="f-text-contact">
+                    Será um prazer conversar com você!
+                </p>
+            </div>
+            <form id="contact-form">
+                <label for="nome">nome</label>
+                <input type="text" id="nome" name="nome" required placeholder="Seu Nome">
+                <label for="email">email</label>
+                <input type="email" id="email" name="email" required placeholder="email@example.com">
+                <label for="mensagem">mensagem</label>
+                <textarea id="mensagem" name="mensagem" required placeholder="Sua Mensagem"></textarea>
+                <button type="submit">Enviar Mensagem</button>
             </form>
         </section>
     </main>
-    <footer class="bg-[rgb(3_17_22)] p-5">
-        <p class="font-[Sora] font-bold leading-7 text-center text-[10px] text-gray-100 md:text-sm tracking-wider"><a href="https://josejuniordev.com" target="_blank" title="José Júnior">José Júnior</a> Desenvolvedor | 2026</p>
+    <footer class="footer">
+        <p>José Júnior Desenvolvedor - 2026</p>
     </footer>
     <script src="scripts/script.js"></script>
 </body>
