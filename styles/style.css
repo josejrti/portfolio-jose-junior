@@ -661,7 +661,7 @@ nav ul li a:active {
 @media (max-width: 700px) {
 
     html {
-        scroll-padding-top: 80px;
+        scroll-padding-top: 50px;
     }
 
     .header {
@@ -855,10 +855,6 @@ nav ul li a:active {
 }
 
 @media (max-width: 400px) {
-
-    html {
-        scroll-padding-top: 80px;
-    }
 
     .header {
         padding-left: 15px;

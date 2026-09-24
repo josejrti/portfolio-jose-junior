@@ -1,9 +1,16 @@
 const form = document.querySelector("#contact-form");
 const menuBtn = document.querySelector("#menu-btn");
 const menu = document.querySelector("#responsive-menu");
+const menuLinks = menu.querySelectorAll("a");
 
 menuBtn.addEventListener("click", () => {
     menu.classList.toggle("active");
+});
+
+menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active");
+    });
 });
 
 form.addEventListener("submit", async (event) => {
