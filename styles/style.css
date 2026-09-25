@@ -349,36 +349,9 @@ nav ul li a:active {
     text-align: center;
 }
 
-.skills #java i {
-    padding-bottom:5px;
-}
-
-.skills #python i {
-    padding-bottom:5px;
-}
-
-.skills #js i {
-    padding-bottom:5px;
-}
-
-.skills #html i {
-    padding-bottom:5px;
-}
-
-.skills #css i {
-    padding-bottom:5px;
-}
-
-.skills #tailwind i {
-    padding-bottom:5px;
-}
-
-
-.skills #git i {
-    padding-bottom:5px;
-}
-
-.skills #github i {
+.skills #java i, .skills #python i, .skills #js i,
+.skills #html i, .skills #css i, .skills #tailwind i,
+.skills #git i, .skills #github i {
     padding-bottom:5px;
 }
 
